@@ -11,9 +11,7 @@ const GameOfLife = ({ initialWorld, tick, active }) => {
   // observers which will update states
   const worldObserver = setWorld
   const activeObserver = active => console.log(`Is paused? ${!active}`)
-  const resetObserver = e => {
-    console.log('RESET - observed')
-  }
+  const resetObserver = e => console.log('RESET - observed')
 
   /*
     wrapper of business logics of the game of life
@@ -55,11 +53,7 @@ GameOfLife.defaultProps = {
 }
 
 GameOfLife.propTypes = {
-  initialWorld: PropTypes.objectOf(
-    PropTypes.array,
-    PropTypes.number,
-    PropTypes.number
-  ),
+  initialWorld: PropTypes.object,
   tick: PropTypes.number,
   active: PropTypes.bool
 }

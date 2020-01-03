@@ -18,7 +18,7 @@ function App () {
   const [active, setActive] = useState(true)
   const [tick] = useState(1000)
 
-  const [isPaused, setIsPaused] = useState(false)
+  const [isPaused, setIsPaused] = useState(!active)
   const pauseHandler = e => {
     const paused = e.target.classList.toggle('paused')
     e.target.textContent = paused ? 'CONTINUE' : 'PAUSE'

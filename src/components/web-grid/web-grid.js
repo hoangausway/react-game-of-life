@@ -21,11 +21,7 @@ const WebGrid = ({ world, toggle }) => {
 }
 
 WebGrid.propTypes = {
-  world: PropTypes.objectOf(
-    PropTypes.array,
-    PropTypes.number,
-    PropTypes.number
-  ),
+  world: PropTypes.object,
   toggle: PropTypes.func
 }
 
