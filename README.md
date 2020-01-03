@@ -8,6 +8,10 @@
 ## To show
 - Taste Functional Reactive Programming (RxJS) with React
 
+For the `web component` version please see:
+- [The Conway's Game Of Life using Atomico and RxJS - <game-of-life>](https://github.com/hoangausway/atomico-game-of-life)
+
+
 ## Source - Build - Run
 
 - The project structure is based on the **create-react-app**.
