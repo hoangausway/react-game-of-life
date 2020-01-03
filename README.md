@@ -1,4 +1,4 @@
-# The Conway's Game Of Life using Atomico and RxJS - `<game-of-life>`
+# The Conway's Game Of Life using React and RxJS - `<game-of-life>`
 
 ## Subjects
 
