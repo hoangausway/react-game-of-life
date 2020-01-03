@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useCallback } from 'react'
 import { Subject } from 'rxjs'
 
 /*
@@ -8,6 +8,7 @@ import { Subject } from 'rxjs'
 */
 export const useEventStream = () => {
   const eventStream$ = useMemo(() => new Subject(), [])
-  const eventEmit = e => eventStream$.next(e) // useCallback maybe OK here
+  // eslint-disable-next-line
+  const eventEmit = useCallback(e => eventStream$.next(e), [])
   return [eventEmit, eventStream$]
 }
