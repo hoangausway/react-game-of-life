@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const WebCell = ({ alive, col, row, toggle }) => {
-  const clickHandler = e => toggle({ ...e, detail: { col, row } })
+const WebCell = ({ alive, col, row, toggleEmit }) => {
+  const clickHandler = e => toggleEmit({ ...e, detail: { col, row } })
   return <StyledCell alive={alive} onClick={clickHandler} />
 }
 
@@ -11,7 +11,7 @@ WebCell.propTypes = {
   alive: PropTypes.bool,
   col: PropTypes.number,
   row: PropTypes.number,
-  toggle: PropTypes.func
+  toggleEmit: PropTypes.func
 }
 
 export default WebCell

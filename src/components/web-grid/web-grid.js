@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import WebCell from '../web-cell/web-cell'
 
-const WebGrid = ({ world, toggle }) => {
+const WebGrid = ({ world, toggleEmit }) => {
   const { arr, cols, rows } = world
 
   return (
@@ -13,7 +13,7 @@ const WebGrid = ({ world, toggle }) => {
         const row = Math.floor(idx / cols)
         const col = idx - row * cols
         return (
-          <WebCell key={idx} col={col} row={row} alive={val} toggle={toggle} />
+          <WebCell key={idx} col={col} row={row} alive={val} toggleEmit={toggleEmit} />
         )
       })}
     </StyledGrid>
@@ -22,7 +22,7 @@ const WebGrid = ({ world, toggle }) => {
 
 WebGrid.propTypes = {
   world: PropTypes.object,
-  toggle: PropTypes.func
+  toggleEmit: PropTypes.func
 }
 
 export default WebGrid

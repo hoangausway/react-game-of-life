@@ -43,7 +43,7 @@ const GameOfLife = ({ initialWorld, tick, active }) => {
     // eslint-disable-next-line
   }, [active])
 
-  return <WebGrid world={world} toggle={toggleEmit} />
+  return <WebGrid world={world} toggleEmit={toggleEmit} />
 }
 
 GameOfLife.defaultProps = {
