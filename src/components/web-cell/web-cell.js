@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const WebCell = ({ alive, col, row, toggle }) => {
-  const clickHandler = e => {
-    const evt = { ...e, detail: { col, row } }
-    toggle(evt)
-  }
+  const clickHandler = e => toggle({ ...e, detail: { col, row } })
   return <StyledCell alive={alive} onClick={clickHandler} />
 }
 

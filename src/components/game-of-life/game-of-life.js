@@ -37,9 +37,9 @@ const GameOfLife = ({ initialWorld, tick, active }) => {
     // eslint-disable-next-line
   }, [initialWorld, tick])
 
-  // kick start by 'active_toggle' event; toggle if 'active' changed
+  // kick start by 'activate_pause' event; emits event 'activate_pause' if 'active' changed
   useEffect(() => {
-    if (active !== null) activeEmit(new window.CustomEvent('active_toggle'))
+    if (active !== null) activeEmit(new window.CustomEvent('activate_pause'))
     // eslint-disable-next-line
   }, [active])
 
